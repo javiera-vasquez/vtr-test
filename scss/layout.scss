@@ -1,0 +1,47 @@
+// Basic setting
+@mixin left {@include float-left;}
+@mixin right {@include float-right;}
+@mixin clear {@include clearfix;}
+@mixin none {display: none;}
+@mixin block {display: block;}
+
+@mixin bold {font-weight: bold;}
+@mixin normal {font-weight: normal;}
+@mixin light {font-weight: 300;}
+
+.none {@include none;}
+.clear {clear: both;}
+
+// Color variables
+$background: #363e48;
+
+// Function to make a custom button, don't necessary in this case
+// @mixin basic-button($bg-color:$primary-color, $text-color: $white, $size: 14, $padding: 35) {
+//     background: $bg-color;
+//     color: $text-color;
+//     font-size: rem-calc($size);
+//     box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
+//     padding: rem-calc(11) rem-calc($padding) rem-calc(12);
+//     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+//     &:hover {
+//         background: darken($bg-color, 5%);
+//         box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
+//     }
+// }
+
+
+
+// Media Querys
+@media only screen and (max-width: 40em) {}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
+
+
+
+
+
+
+
+
+
+
+
