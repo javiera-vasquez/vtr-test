@@ -14,17 +14,45 @@
 
 // Color variables
 $bg-nav: #2d3336;
-//background-color: rgba($bg-nav, 0.5);
 
 // Header
 header {
     background-color: $bg-nav;
-    ul {
-        li
+    padding: .6em .3em;
+    margin-bottom: 2em;
+    .user {
+        @include left;
+        width: 10%;
     }
-    .user { width: 50%;}
+    .search {
+        @include right;
+        text-align: right;
+        width: 10%;
+    }
+    .logo {
+        @include left;
+        text-align: center;
+        width: 80%;
+    }
+    .user, .logo, .search {
+        img {height: 30px}
+    }
+}
 
-
+//nav
+#nav {
+    background-color: rgba($bg-nav, 0.9);
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    bottom: 0;
+    ul {
+        li {
+            display: inline;
+            text-decoration: none;
+        }
+        .active {}
+    }
 }
 
 // Content
@@ -50,7 +78,7 @@ header {
         padding: 1em;
     }
     .intro {
-        margin-top: 0.5em;
+        margin: 0.5em 0;
         font-size: rem-calc(18);
     }
     .spacer {
@@ -67,7 +95,7 @@ header {
 // small
 @media only screen and (max-width: 40em) {
     #facebook, #facebook .spacer {text-align: center;}
-    #facebook .intro {margin-top: 0;}
+    #facebook .intro {margin: 0 0 1em;}
 }
 // medium
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
