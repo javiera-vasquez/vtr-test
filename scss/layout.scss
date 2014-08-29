@@ -1,6 +1,6 @@
 // Basic setting
-@mixin left {@include float-left;}
-@mixin right {@include float-right;}
+@mixin left {float: left;}
+@mixin right {float: right;}
 @mixin clear {@include clearfix;}
 @mixin none {display: none;}
 @mixin block {display: block;}
@@ -13,27 +13,67 @@
 .clear {clear: both;}
 
 // Color variables
-$background: #363e48;
+$bg-nav: #2d3336;
+//background-color: rgba($bg-nav, 0.5);
 
-// Function to make a custom button, don't necessary in this case
-// @mixin basic-button($bg-color:$primary-color, $text-color: $white, $size: 14, $padding: 35) {
-//     background: $bg-color;
-//     color: $text-color;
-//     font-size: rem-calc($size);
-//     box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
-//     padding: rem-calc(11) rem-calc($padding) rem-calc(12);
-//     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-//     &:hover {
-//         background: darken($bg-color, 5%);
-//         box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
-//     }
-// }
+// Header
+header {
+    background-color: $bg-nav;
+    ul {
+        li
+    }
+    .user { width: 50%;}
 
 
+}
+
+// Content
+.title-sec {
+    h3 {@include left;}
+    .button  {
+        @include right;
+        font-size: rem-cacl(14);
+    }
+}
+
+.loop-sec {
+    margin-bottom: 1.5em;
+    img {
+        margin-bottom: 1em;
+    }
+}
+
+#facebook {
+    margin-bottom: 1.5em;
+    .margin {
+        background-color: $smoke;
+        padding: 1em;
+    }
+    .intro {
+        margin-top: 0.5em;
+        font-size: rem-calc(18);
+    }
+    .spacer {
+        text-align: right;
+        .button {background-color: $secondary-color;}
+    }
+    .leyend {
+        font-size: rem-calc(13);
+        margin-bottom: 0;
+    }
+}
 
 // Media Querys
-@media only screen and (max-width: 40em) {}
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
+// small
+@media only screen and (max-width: 40em) {
+    #facebook, #facebook .spacer {text-align: center;}
+    #facebook .intro {margin-top: 0;}
+}
+// medium
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .loop-sec div:last-child {@include none;}
+    #facebook .intro {margin-top: 0;}
+}
 
 
 
