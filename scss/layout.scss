@@ -39,6 +39,17 @@ header {
     }
 }
 
+#search {
+    @include none;
+    margin-top: -2em;
+    margin-bottom: 2em;
+    a, input {margin-bottom: 0;}
+    .margin {
+        background-color: $smoke;
+        padding: 1em;
+    }
+}
+
 //nav
 #nav {
     background-color: rgba($bg-nav, 0.9);
